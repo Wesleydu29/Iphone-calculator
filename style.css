@@ -47,3 +47,16 @@ body {
     grid-column-start: 1;
     grid-column-end: 3;
 }
+.calculator .buttons button:nth-child(-n+3) {
+    background: linear-gradient(140deg, #3b424d, #5D697A);
+    box-shadow: inset 5px 5px 5px #5D697A, 
+                inset -5px -5px 5px #5D697A, 
+                5px 5px 5px #1d1f25;
+}
+.calculator .buttons button:nth-child(4n),
+.calculator .buttons button:nth-child(19) {
+    background: linear-gradient(140deg, #BC5A17, #E09121);
+    box-shadow: inset 5px 5px 5px #E09121, 
+                inset -5px -5px 5px #E09121, 
+                5px 5px 5px #1d1f25;
+}
