@@ -10,3 +10,40 @@ body {
     align-items: center;
     min-height: 100vh;
 }
+.calculator {
+    padding: 20px;
+    background: linear-gradient(140deg, #3B3E4C, #1E222F);
+    box-shadow: 50px 150px 150px #2b2e36;
+    border-radius: 25px;
+}
+.calculator .screen {
+    height: 200px;
+    color: #bbb;
+    font-size: 50px;
+    text-align: right;
+    padding-top: 50px;
+}
+.screen .current {
+    font-size: 80px;
+    color: white;
+}
+.calculator .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 70px);
+    grid-template-rows: repeat(5, 70px);
+    gap: 10px;
+}
+.calculator .buttons button {
+    border-radius: 10px;
+    color: #efefef;
+    border: none;
+    font-size: x-large;
+    background: linear-gradient(140deg, #262B39, #323847);
+    box-shadow: inset 5px 5px 5px #323847, 
+                inset -5px -5px 5px #323847, 
+                5px 5px 5px #1d1f25;
+}
+.calculator .buttons button:nth-child(17) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
