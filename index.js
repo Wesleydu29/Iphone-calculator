@@ -8,7 +8,7 @@ let calculator = '+';
 
 function reloadScreen() {
     lastReturn.innerHTML = firstNumber ? firstNumber + ' ' + calculator : '';
-    currentReturn.innerHTML = newNumber ? newNumber : '0';
+    currentReturn.innerHTML = newNumber ? newNumber : '';
 }
 reloadScreen();
 
@@ -60,5 +60,10 @@ listButtons.forEach(button => {
 
 })
 function applyCalculator() {
+    switch (calculator) {
+        case '÷':
+            newNumber = firstNumber / newNumber;
+            break;
+    }
 
 }
