@@ -41,9 +41,12 @@ listButtons.forEach(button => {
                 break;
             case '+':
             case '-':
-            case 'X':
+            case 'x':
             case '÷':
                 if (newNumber) {
+                    if (firstNumber) {
+                        applyCalculator();
+                    } 
                     calculator = buttonValue;
                     firstNumber = newNumber;
                     newNumber = null;
@@ -51,6 +54,12 @@ listButtons.forEach(button => {
                 break;
             case '=':
                 applyCalculator();
+                firstNumber = null;
+                break;
+            case 'AC':
+                firstNumber = null;
+                newNumber = null;
+                calculator = '+';
                 break;
             default:
                 break;
@@ -64,7 +73,7 @@ function applyCalculator() {
         case '÷':
             newNumber = (firstNumber / newNumber).toFixed(4);
             break;
-        case 'X':
+        case 'x':
             newNumber = firstNumber * newNumber;
             break;
         case '-':
