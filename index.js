@@ -62,7 +62,16 @@ listButtons.forEach(button => {
 function applyCalculator() {
     switch (calculator) {
         case '÷':
-            newNumber = firstNumber / newNumber;
+            newNumber = (firstNumber / newNumber).toFixed(4);
+            break;
+        case 'X':
+            newNumber = firstNumber * newNumber;
+            break;
+        case '-':
+            newNumber = firstNumber - newNumber;
+            break;
+        case '+':
+            newNumber = Number(firstNumber) + Number(newNumber);
             break;
     }
 
